@@ -1,0 +1,159 @@
+{
+  // =====================================================
+  // GITHUB COPILOT SETTINGS
+  // =====================================================
+
+  // Enable Copilot for all supported languages
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "yaml": true,
+    "json": true
+  },
+
+  // Enable inline suggestions
+  "github.copilot.editor.enableAutoCompletions": true,
+
+  // Use custom instructions from .github/copilot-instructions.md
+  "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+
+  // Locations to search for instruction files
+  "chat.instructionsFilesLocations": [
+    ".github/copilot-instructions.md",
+    ".github/instructions/*.instructions.md"
+  ],
+
+  // Enable Copilot Chat features
+  "github.copilot.chat.enabled": true,
+
+  // Enable workspace indexing for better context
+  "github.copilot.chat.indexing.enabled": true,
+
+  // Locale override (optional - uncomment if needed)
+  // "github.copilot.chat.localeOverride": "en",
+
+  // Code generation additional instructions
+  "github.copilot.chat.codeGeneration.instructions": "Follow project-specific instructions in .github/copilot-instructions.md and path-specific instructions in .github/instructions/. Prioritize type safety, error handling, and code readability.",
+
+  // Enable experimental features
+  "github.copilot.chat.experimental.generateDocs.enabled": true,
+
+  // Context scope selection
+  "github.copilot.chat.scopeSelection": true,
+
+  // Web search integration (enable if using Copilot Individual/Business)
+  // "github.copilot.chat.search.webSearchEnabled": true,
+
+  // =====================================================
+  // EDITOR SETTINGS FOR AI ASSISTANCE
+  // =====================================================
+
+  // Show inline suggestions as you type
+  "editor.inlineSuggest.enabled": true,
+
+  // Tab completion for Copilot suggestions
+  "editor.tabCompletion": "on",
+
+  // Quick suggestions while typing
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+
+  // Suggestion delay (ms)
+  "editor.quickSuggestionsDelay": 10,
+
+  // Accept suggestions on Enter
+  "editor.acceptSuggestionOnEnter": "on",
+
+  // Word-based suggestions
+  "editor.wordBasedSuggestions": "matchingDocuments",
+
+  // Terminal settings
+  // Enable Copilot in terminal
+  "terminal.integrated.suggest.enabled": true,
+
+  // Terminal command suggestions
+  "terminal.integrated.commandSuggestions.enabled": true,
+
+  // =====================================================
+  // PERFORMANCE & CONTEXT MANAGEMENT
+  // =====================================================
+
+  // Workspace indexing preferences
+  "github.copilot.chat.indexing.localIndexingEnabled": true,
+
+  // Editor context
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.suggest.showStatusBar": true,
+
+  // =====================================================
+  // FILE ASSOCIATIONS
+  // =====================================================
+
+  "files.associations": {
+    "*.prompt.md": "markdown",
+    "SKILL.md": "markdown",
+    "CLAUDE.md": "markdown",
+    "*.instructions.md": "markdown",
+    "*.agent.md": "markdown"
+  },
+
+  // Files to exclude
+  "files.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/__pycache__": true,
+    "**/.pytest_cache": true,
+    "**/build": true,
+    "**/dist": true
+  },
+
+  // Search exclude patterns
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true,
+    "**/build": true,
+    "**/dist": true,
+    "**/.git": true,
+    "**/__pycache__": true
+  },
+
+  // =====================================================
+  // FORMATTING & LINTING
+  // =====================================================
+
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "[dart]": {
+    "editor.defaultFormatter": "Dart-Code.dart-code"
+  },
+
+  // =====================================================
+  // WORKSPACE SPECIFIC
+  // =====================================================
+
+  // Git settings for better Copilot integration
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+
+  // Breadcrumbs for better navigation
+  "breadcrumbs.enabled": true,
+
+  // Problems view
+  "problems.showCurrentInStatus": true,
+  "github.copilot.chat.testGeneration.instructions": "Generate tests using Jest for TypeScript/JavaScript, pytest for Python, and flutter_test for Dart. Use descriptive test names following 'should [behavior] when [condition]' pattern. Include arrange-act-assert structure. Mock external dependencies. Aim for 80% coverage with focus on business logic and edge cases."
+}

@@ -1,0 +1,201 @@
+// VS Code Keybindings for GitHub Copilot & Claude Code
+// Place this file at .vscode/keybindings.json or merge with your user keybindings.json
+[
+  // =====================================================
+  // COPILOT INLINE CHAT
+  // =====================================================
+  {
+    "key": "ctrl+i",
+    "command": "inlineChat.start",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "inlineChat.start",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "escape",
+    "command": "inlineChat.discard",
+    "when": "inlineChatVisible"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "inlineChat.accept",
+    "when": "inlineChatVisible"
+  },
+
+  // =====================================================
+  // COPILOT CHAT VIEW
+  // =====================================================
+  {
+    "key": "ctrl+alt+i",
+    "command": "workbench.action.chat.open"
+  },
+  {
+    "key": "ctrl+alt+c",
+    "command": "workbench.action.chat.clear"
+  },
+  {
+    "key": "ctrl+alt+n",
+    "command": "workbench.action.chat.newChat"
+  },
+
+  // =====================================================
+  // COPILOT EDITS
+  // =====================================================
+  {
+    "key": "ctrl+shift+e",
+    "command": "workbench.action.chat.openEditSession"
+  },
+  {
+    "key": "f7",
+    "command": "workbench.action.chat.nextEditLocation",
+    "when": "inChat && chatEditingSessionActive"
+  },
+  {
+    "key": "shift+f7",
+    "command": "workbench.action.chat.previousEditLocation",
+    "when": "inChat && chatEditingSessionActive"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "workbench.action.chat.acceptEdit",
+    "when": "inChat && chatEditingSessionActive"
+  },
+  {
+    "key": "ctrl+backspace",
+    "command": "workbench.action.chat.discardEdit",
+    "when": "inChat && chatEditingSessionActive"
+  },
+
+  // =====================================================
+  // COPILOT SUGGESTIONS
+  // =====================================================
+  {
+    "key": "alt+]",
+    "command": "editor.action.inlineSuggest.showNext",
+    "when": "inlineSuggestionVisible && !editorReadonly"
+  },
+  {
+    "key": "alt+[",
+    "command": "editor.action.inlineSuggest.showPrevious",
+    "when": "inlineSuggestionVisible && !editorReadonly"
+  },
+  {
+    "key": "alt+\\",
+    "command": "editor.action.inlineSuggest.trigger",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "tab",
+    "command": "editor.action.inlineSuggest.commit",
+    "when": "inlineSuggestionVisible && !editorTabMovesFocus"
+  },
+  {
+    "key": "ctrl+right",
+    "command": "editor.action.inlineSuggest.acceptNextWord",
+    "when": "inlineSuggestionVisible && !editorReadonly"
+  },
+
+  // =====================================================
+  // CONTEXT REFERENCES
+  // =====================================================
+  {
+    "key": "ctrl+#",
+    "command": "workbench.action.chat.attachContext",
+    "when": "inChat"
+  },
+  {
+    "key": "ctrl+shift+#",
+    "command": "workbench.action.chat.attachFile",
+    "when": "inChat"
+  },
+  {
+    "key": "ctrl+@",
+    "command": "workbench.action.chat.mentionParticipant",
+    "when": "inChat"
+  },
+
+  // =====================================================
+  // SLASH COMMANDS
+  // =====================================================
+  {
+    "key": "ctrl+/",
+    "command": "workbench.action.chat.insertSlashCommand",
+    "when": "inChat"
+  },
+
+  // =====================================================
+  // CODE ACTIONS
+  // =====================================================
+  {
+    "key": "ctrl+.",
+    "command": "editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+r",
+    "command": "editor.action.refactor",
+    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+  },
+
+  // =====================================================
+  // COPILOT SPECIFIC ACTIONS
+  // =====================================================
+  {
+    "key": "ctrl+shift+d",
+    "command": "github.copilot.generate.docs",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+t",
+    "command": "github.copilot.generate.tests",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+x",
+    "command": "workbench.action.chat.open",
+    "args": "/explain"
+  },
+  {
+    "key": "ctrl+shift+f",
+    "command": "workbench.action.chat.open",
+    "args": "/fix"
+  },
+
+  // =====================================================
+  // TERMINAL SUGGESTIONS
+  // =====================================================
+  {
+    "key": "ctrl+space",
+    "command": "editor.action.triggerSuggest",
+    "when": "terminalFocus"
+  },
+
+  // =====================================================
+  // WORKSPACE NAVIGATION
+  // =====================================================
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "ctrl+shift+f",
+    "command": "workbench.action.findInFiles",
+    "when": "!inChat"
+  },
+  {
+    "key": "ctrl+shift+p",
+    "command": "workbench.action.showCommands"
+  },
+
+  // =====================================================
+  // CUSTOM AGENT SWITCHING (when agents are configured)
+  // =====================================================
+  {
+    "key": "ctrl+alt+a",
+    "command": "workbench.action.chat.selectAgent",
+    "when": "inChat"
+  }
+]
