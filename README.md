@@ -12,8 +12,6 @@ superagent is a collection of 37 AI subagent definitions organized for use with 
 
 The collection is structured around the operational departments of a lean product studio running 6-day development cycles: engineering, design, product, marketing, project management, testing, studio operations, and a bonus category.
 
-> Screenshot or demo GIF recommended: show the Claude Code subagent picker or a side-by-side of two specialized agents responding to the same codebase.
-
 ---
 
 ## Highlights
